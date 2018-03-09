@@ -3,7 +3,11 @@ const Footer = () => {
 
     return(
 
-        <div> Footer </div>
+        <div className="container">
+            <div className="panel panel-default">
+                <div className="panel-body">A Basic Panel</div>
+            </div>
+        </div>
 
     );
 
