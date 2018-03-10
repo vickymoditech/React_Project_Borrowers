@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 const classNames = [
     "first-header",
@@ -6,37 +6,31 @@ const classNames = [
     "third-header"
 ];
 
-class Slider extends Component{
-
-    constructor(props){
+export default class Slider extends Component {
+    constructor(props) {
         super(props);
-        this.state = {index:0,data:0}
+        this.state = {
+            index: 0,
+        };
+    }
+
+    incrementIndex = () => {
+        const newIndex = this.state.index + 1;
+        this.setState({ index: newIndex })
     }
 
     componentDidMount = () => {
-        setInterval(this.change_slider, 3000);
+        setInterval(this.incrementIndex, 3000);
     }
 
-    change_slider(){
-
-        console.log(this.state);
-        //const newIndex = this.state.index + 1;
-        //this.setState({ index: this.state})
-
-    }
-
-
-
-    render(){
+    render() {
         const index = this.state.index % classNames.length;
         const className = classNames[index];
         return(
-
-            <div> {index} </div>
-
+            <div>
+                <div className={className}>
+                </div>
+            </div>
         )
-
     }
 }
-
-export default Slider;
