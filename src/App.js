@@ -14,8 +14,8 @@ class App extends Component {
           <Header/>
             <Index/>
           <Footer/>
-          <Barcode_generator/>
-          <Time_line/>
+          { /*<Barcode_generator/> */ }
+          {/* <Time_line/> */}
       </div>
     );
   }
