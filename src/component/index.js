@@ -23,8 +23,6 @@ class Index extends Component{
 
                 { /* putted here slider  */}
                 <Slider/>
-
-                <h1> All Product </h1>
                 <div className="items-wrapper">
                     <div className="items-title">
                         <h4>All Items</h4>

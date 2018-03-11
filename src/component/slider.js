@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import './slider.css';
 
-const classNames = [
-    "first-header",
-    "second-header",
-    "third-header"
+const slider_image = [
+    "https://preview.ibb.co/j8nRCQ/fashion2.jpg",
+    "https://preview.ibb.co/fm4Cmk/fashion3.jpg",
+    "https://preview.ibb.co/bMsCK5/fashion5.jpg",
+    "https://preview.ibb.co/fm4Cmk/fashion6.jpg"
 ];
 
 export default class Slider extends Component {
@@ -24,11 +26,15 @@ export default class Slider extends Component {
     }
 
     render() {
-        const index = this.state.index % classNames.length;
-        const className = classNames[index];
+        const index = this.state.index % slider_image.length;
+        const className = slider_image[index];
+        var divStyle = {
+            backgroundImage: 'url(' + slider_image[index] + ')',
+        };
         return(
             <div>
-                <div className={className}>
+                <div className="slider" style={divStyle}>
+                    <div>{index}</div>
                 </div>
             </div>
         )
